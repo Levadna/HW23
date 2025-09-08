@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include "Schedule.h"
 #include "Time.h"
 using namespace std;
 
@@ -35,4 +36,11 @@ int main()
     cout << "-------------------------\n";
     Time_ t3 = t1 + 120.0f;
     t3.showTime();
+
+    cout << "-------------------------\n";
+    cout << "-------------------------\n";
+    Time_ start(9, 0, 0, true);
+    Schedule s(start, 45, 10, 20, 0, 6);
+
+    s.generateSchedule();
 }
