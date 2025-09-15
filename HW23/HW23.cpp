@@ -1,11 +1,12 @@
 ﻿#include <iostream>
 #include "Schedule.h"
 #include "Time.h"
+#include "Bus.h"
 using namespace std;
 
 int main()
 {
-    Time_ t1;
+    /*Time_ t1;
     Time_ t2(23, 59, 58, true);
 
     t1.showTime();
@@ -42,5 +43,9 @@ int main()
     Time_ start(9, 0, 0, true);
     Schedule s(start, 45, 10, 20, 0, 6);
 
-    s.generateSchedule();
+    s.generateSchedule();*/
+
+    Bus a;
+    a.showSchedule();
+    return 0;
 }

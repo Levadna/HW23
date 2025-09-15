@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+using namespace std;
 class Time_
 {
 	int hour;
@@ -46,5 +48,23 @@ public:
 	Time_ operator - (int m)const&;
 	Time_ operator + (long h)const&; // add hours
 	Time_ operator - (long h)const&;
+
+	Time_& operator -- ();
+	Time_ operator -- (int);
+	Time_& operator ++ ();
+	Time_ operator ++ (int);
+
+	friend Time_ operator + (int seconds, const Time_& a);
+	friend Time_ operator - (int seconds, const Time_& a);
+
+	friend Time_ operator + (float minutes, const Time_& a);
+	friend Time_ operator - (float minutes, const Time_& a);
+
+	friend Time_ operator + (long hours, const Time_& a);
+	friend Time_ operator - (long hours, const Time_& a);
+
+
+	friend ostream& operator<<(ostream& os, const Time_& t);
+	friend istream& operator>>(istream& is, Time_& t);
 };
 
